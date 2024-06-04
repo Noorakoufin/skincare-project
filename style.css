@@ -242,7 +242,7 @@
 /* slider of images  */
 
 .slider {
-  max-width: 87vw;
+  width: 87vw;
   margin: auto;
   overflow: hidden;
   position: relative;
@@ -916,11 +916,13 @@ form #uname,
   .footer-part {
     display: inline;
     padding: 10px;
+  
   }
 
   .part1,
   .part2 {
     margin-bottom: 30px;
+    margin-left: 10px;
   }
 }
 
@@ -935,7 +937,7 @@ form #uname,
   }
 
   .slide img {
-    height: 50vh;
+    height: 45vh;
   }
 
   .navigation .bar {
@@ -950,10 +952,13 @@ form #uname,
   .insta h2 {
     font-size: 20px;
   }
-
+.inside-content-two
+{
+  width: 100vw;
+}
   .shopby-nav {
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
   }
 
   .subscribe-form {
@@ -962,8 +967,15 @@ form #uname,
 }
 
 @media screen and (max-width: 400px) {
-  .slide img {
-    height: 45vh;
+  
+  .slider{
+    margin: 0;
+    width: 100vw;
+   
+  }
+  .slide img 
+  {
+    height: 35vh;
   }
 
   .card,
@@ -987,5 +999,17 @@ form #uname,
     font-size: 12px;
   }
 }
-
+@media screen and (max-width: 350px) 
+{
+ .infocus-heading h2 ,
+ .text-outside-slider #heading-title
+  {
+    font-size: 17px;
+  }
+  .text-outside-slider #heading-title
+  {
+    font-size: 15px;
+  }
+  
+}
 

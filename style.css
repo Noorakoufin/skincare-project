@@ -7,7 +7,6 @@
   
 }
 
-
 /* the top pink bar */
 
 .topbar {
@@ -49,6 +48,7 @@
   top: 0px;
   justify-content: space-around;
   font-family: "Josefin Sans", sans-serif;
+  z-index: 2;
 }
 
 /* headings on the navbar */
@@ -57,7 +57,7 @@
   cursor: pointer;
   display: flex;
   width: 15%;
-  justify-content: center;
+  
 }
 
 .navbar {
@@ -100,7 +100,7 @@
   content: "";
   position: absolute;
   background-color: #e79eb0;
-  height: 1px;
+  height: 1.7px;
   width: 0;
   bottom: 0;
   transition: 0.3s ease-in-out;
@@ -116,8 +116,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  width: 20%;
-  justify-content: flex-end;
+  
 }
 
 .search-cart .search {
@@ -150,7 +149,7 @@
 
 .navbar-content .mega-menu {
   position: absolute;
-  top: 52px;
+  top: 49px;
   left: 0;
   display: flex;
   background-color: #ffffff;
@@ -254,7 +253,7 @@
   width: 100%;
   transition: 0.6s;
   position: relative;
-  z-index: -1;
+  /* z-index: -1; */
 }
 
 .slide {
@@ -392,6 +391,14 @@ input[name="slider"] {
 #shopby-nav3,
 #shopby-nav4 {
   color: #222;
+ 
+}
+#shopby-nav2:hover ,
+#shopby-nav3:hover ,
+#shopby-nav4:hover
+{
+  color: #e89eb0;
+  transition: 0.2s ease-in-out;
 }
 
 /* the four image cards  */
@@ -412,7 +419,7 @@ input[name="slider"] {
   height: 100%;
   gap: 10px;
   position: relative;
-  z-index: -1;
+  
 }
 
 .image1 {
@@ -421,6 +428,7 @@ input[name="slider"] {
   padding: 15px;
  position: relative;
   cursor: pointer;
+  
 }
 
 .bg-image {
@@ -430,6 +438,11 @@ input[name="slider"] {
   position: relative;
   padding: 15px;
   height: 85%;
+  transform: scale(1);
+}
+.bg-image:hover 
+{
+  transform: scale(1.07);
 }
 
 .image1 .image-text {
@@ -452,7 +465,6 @@ input[name="slider"] {
   
   margin-right: auto;
   margin-left: auto;
-  
   padding: 0 0 35px;
 }
 
@@ -472,6 +484,11 @@ input[name="slider"] {
 .image-inside-stack {
   display: flex;
   justify-content: space-evenly;
+  transform: scale(1);
+}
+.image-inside-stack:hover
+{
+  transform: scale(1.05);
 }
 
 .image-inside-stack img {
@@ -515,7 +532,12 @@ input[name="slider"] {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   position: relative;
+  transform: scale(1);
 
+}
+.card:hover
+{
+  transform: scale(1.05);
 }
 
 .card img {
@@ -598,8 +620,13 @@ input[name="slider"] {
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 5px;
+  transform: scale(1);
+ 
 }
-
+.product-card-content:hover
+{
+  transform: scale(1.05);
+}
 .product-card-content img {
   height: auto;
   width: 100%;
@@ -765,7 +792,11 @@ form #uname,
   letter-spacing: 0px;
 }
 
-.sub-button input {
+.sub-button a {
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  padding-top: 13px;
   cursor: pointer;
   height: 50px;
   width: 100%;
@@ -776,7 +807,7 @@ form #uname,
   font-family: Geneva, Tahoma, Verdana, sans-serif;
   font-size: 16px;
   font-weight: 400;
-  letter-spacing: 1px;
+  letter-spacing: 1.1px;
   text-transform: uppercase;
 }
 

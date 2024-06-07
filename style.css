@@ -6,6 +6,10 @@
   box-sizing: border-box;
   
 }
+/* html
+{
+  scroll-behavior: smooth;
+} */
 
 /* the top pink bar */
 
@@ -16,6 +20,7 @@
   background-color: #e79eb0;
   color: #ffffff;
   font-family: "Josefin Sans", sans-serif;
+  position: relative;
 }
 
 .topbar-content {
@@ -36,6 +41,7 @@
   font-family: "Josefin Sans", sans-serif;
 }
 
+
 /* the main navbar */
 .nav {
   display: flex;
@@ -49,6 +55,7 @@
   justify-content: space-around;
   font-family: "Josefin Sans", sans-serif;
   z-index: 2;
+ 
 }
 
 /* headings on the navbar */
@@ -71,7 +78,6 @@
   text-decoration: none;
   color: #323232;
   font-size: 13px;
-  letter-spacing: 0.5px;
   position: relative;
 }
 
@@ -100,9 +106,9 @@
   content: "";
   position: absolute;
   background-color: #e79eb0;
-  height: 1.7px;
-  width: 0;
-  bottom: 0;
+  height: 2px;
+  width:0;
+  bottom: -3px;
   transition: 0.3s ease-in-out;
 }
 
@@ -149,7 +155,7 @@
 
 .navbar-content .mega-menu {
   position: absolute;
-  top: 49px;
+  top: 57px;
   left: 0;
   display: flex;
   background-color: #ffffff;
@@ -162,7 +168,7 @@
   border-bottom: 1px solid rgb(180, 177, 177);
   visibility: hidden;
   opacity: 0;
-  transition: all 0.5s ease;
+  transition: all 0.5s ease-in-out;
 }
 .mega-menu .row ,
 .conscious-beauty-image{
@@ -259,7 +265,11 @@
 .slide {
   width: 100%;
   flex: 1 0 100%;
+  animation: shrink 4s ease-in-out infinite;
 }
+@keyframes shrink {
+  from { transform: scale(1);  }
+  to { transform: scale(0.98);  }} 
 
 .slide img {
   width: 100%;
@@ -439,7 +449,11 @@ input[name="slider"] {
   padding: 15px;
   height: 85%;
   transform: scale(1);
+  transition: 0.3s;
+  
 }
+
+
 .bg-image:hover 
 {
   transform: scale(1.07);
@@ -477,7 +491,8 @@ input[name="slider"] {
 .stack-images {
   display: flex;
   justify-content: center;
-  width: 100%;
+  /* width: 95%;
+  margin: auto; */
   padding: 20px 0;
 }
 
@@ -485,10 +500,11 @@ input[name="slider"] {
   display: flex;
   justify-content: space-evenly;
   transform: scale(1);
+  transition:transform 0.3s ease-in ;
 }
 .image-inside-stack:hover
 {
-  transform: scale(1.05);
+  transform: scale(0.95);
 }
 
 .image-inside-stack img {
@@ -533,12 +549,21 @@ input[name="slider"] {
   border-radius: 10px;
   position: relative;
   transform: scale(1);
-
+  transition:transform 0.3s ease-out ;
+ 
 }
 .card:hover
 {
-  transform: scale(1.05);
+   transform: scale(1.05);
 }
+.card:hover .image-overlay 
+
+{
+  opacity: 0.5;
+  visibility: visible;
+ transition: all 0.5s ease-in;
+}
+
 
 .card img {
   width: 100%;
@@ -555,16 +580,28 @@ input[name="slider"] {
   width: 100%;
   height: 100%;
   z-index: -2;
-  opacity: 0.5;
+  opacity: 0;
   cursor: pointer;
+  visibility: hidden;
 }
 
 .card-content {
   position: absolute;
-  bottom: 50px;
+  bottom: 0px;
   left: 8px;
   font-family: josefin sans, Sans-serif;
   cursor: pointer;
+  visibility: hidden;
+  transition: all .2s ease-in-out;
+
+}
+
+.card:hover .card-content
+{
+  opacity: 1;
+  visibility: visible;
+ transform: translateY(-100px);
+
 }
 
 .card-content h3 {
@@ -574,6 +611,7 @@ input[name="slider"] {
   line-height: 1.2em;
   font-weight: 500;
   color: #ffffff;
+  transition: color 0.4s ease-in-out;
 }
 
 .card-content a {
@@ -587,11 +625,12 @@ input[name="slider"] {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 5px 10px;
   border-radius: 5px;
+  transition: color 0.4s ease-in-out;
 }
 
 .card-content h3:hover {
   color: #111;
-  transition: color 0.2s ease;
+ 
 }
 
 .card-content a:hover {
@@ -620,12 +659,17 @@ input[name="slider"] {
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 5px;
+  transition: all 0.2s;
   transform: scale(1);
  
 }
 .product-card-content:hover
 {
-  transform: scale(1.05);
+  transform: scale(0.97);
+}
+.product-card-content:hover i.fa-regular.fa-heart
+{
+  opacity: 1;
 }
 .product-card-content img {
   height: auto;
@@ -642,6 +686,17 @@ input[name="slider"] {
   border-radius: 3px;
   font-weight: 500;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+i.fa-regular.fa-heart
+{
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  opacity: 0;
 }
 
 .product-card-content #cont {
@@ -716,12 +771,53 @@ input[name="slider"] {
 
 .brand-images {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
+ 
 }
 
 .image-brand {
   width: 28%;
+  position: relative;
+ 
+}
+
+.girl-text
+{
+  position: absolute;
+  text-align: center;
+  background-color: #f6f4f4f5;
+  display: flex;
+  flex-direction: column;
+  width: 94%;
+  padding: 10px;
+  margin: 0 10px;
+  top: 0;
+ border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  font-family: "Josefin Sans", sans-serif;
+  color: rgb(13, 13, 13);
+  opacity: 0;
+   transition: all .6s ease;
+ 
+}
+
+.girl-text h5{
+ font-size: 12px;
+ font-weight: 650;
+ margin-bottom: 6px;
+ 
+}
+.girl-text p{
+  font-size: 11px;
+  font-weight: 500;
+}
+.image-brand:hover .girl-text
+{
+ 
+  opacity: 1;
+  transform: translateY(258px);
 }
 
 .brand-images img {
@@ -820,15 +916,23 @@ form #uname,
 .footer-part {
   display: flex;
   flex-wrap: wrap;
+  width: 80vw;
+  margin: auto;
   justify-content: space-around;
   padding: 20px;
  
 }
+.footer-part .part1 ,
+.part2{
+  flex: 1 1 25%;
+  border-right: 1px solid #cac4c4;
+  padding-left: 15px;
+}
 
 .footer-part .part1 img {
-  width: 200px;
+  width: 185px;
   height: auto;
-  max-width: 100%;
+  max-width: 80%;
   border: none;
   border-radius: 0;
   box-shadow: none;
@@ -836,10 +940,11 @@ form #uname,
 
 .footer-part .part1 p {
   font-family: josefin sans, Sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   margin-top: 10px;
   color: #686868;
   width: 80%;
+
 }
 
 .footer-part .part1 p:hover {
@@ -849,7 +954,7 @@ form #uname,
 .footer-part .part2 h2 {
   color: #c16784;
   font-family: josefin sans, Sans-serif;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 400;
   text-transform: uppercase;
   line-height: 1;
@@ -864,18 +969,17 @@ form #uname,
   text-decoration: none;
   color: #686868;
   font-family: josefin sans, Sans-serif;
-  font-size: 15px;
+  font-size: 13px;
   cursor: pointer;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 2px;
-  padding-bottom: 2px;
+ padding: 2px 0;
   transition: 0.4s;
   line-height: 20px;
+  transition: transform .35s ease;
 }
 
 .footer-part .part2 a:hover {
   color: #c16784;
+  transform: translate(8px);
 }
 
 /* copyright section */
@@ -943,6 +1047,7 @@ form #uname,
   .product-card-content {
     flex: 1 1 35%;
   }
+  
 
   .footer-part {
     display: inline;
@@ -961,9 +1066,9 @@ form #uname,
   .nav .logo {
     width: 30%;
   }
- 
-  .right-textwidget :nth-child(n + 1),
-  .navbar {
+ .right-textwidget :nth-child(n + 1) ,
+  .navbar
+  {
     display: none;
   }
 
@@ -987,14 +1092,20 @@ form #uname,
 {
   width: 100vw;
 }
+
   .shopby-nav {
     flex-direction: column;
     gap: 20px;
   }
 
   .subscribe-form {
-    width: 90%;
-  }
+    width: 100%;
+   }
+   .subscribe .form-class
+   {
+    width: 100%;
+    margin: 10px 0 0 0;
+   }
 }
 
 @media screen and (max-width: 400px) {
@@ -1013,7 +1124,12 @@ form #uname,
   .product-card-content {
     flex: 1 1 49%;
   }
+  .image-brand
+  {
+    flex: 1 1 49%;
+    margin: 10px;
 
+  }
   .stack-images {
     display: inline;
   }
@@ -1041,6 +1157,9 @@ form #uname,
   {
     font-size: 15px;
   }
-  
+  .image-brand:hover .girl-text
+{
+   transform: translateY(220px);
+}
 }
 

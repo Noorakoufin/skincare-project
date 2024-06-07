@@ -34,6 +34,7 @@
 
     <!-- the main navbar -->
     <div class="nav">
+        
         <div class="logo">
             <img src="image/logo.webp" alt="logo of beauty barn" style="max-width: 100%;">
         </div>
@@ -105,7 +106,7 @@
 
                 <!-- mega-menu ends here -->
 
-                <li id="item2"><a href="">best sellers</a></li>
+                <li id="item2"><a href="#pcard">best sellers</a></li>
 
                 <!-- routines's drop down menu -->
                 <li id="item3"><a href="">routines</a>
@@ -115,9 +116,9 @@
                     </ul>
                 </li>
                 <!-- drop down menu ends here -->
-                <li id="item4"><a href="">brands</a></li>
-                <li id="item5"><a href="">hot deals</a></li>
-                <li id="item6"><a href="">blog</a></li>
+                <li id="item4"><a href="#brand">brands</a></li>
+                <li id="item5"><a href="#deal">hot deals</a></li>
+                <li id="item6"><a href="#sub">join</a></li>
 
             </ul>
         </div>
@@ -260,7 +261,7 @@
     </div>
 
     <!-- multiple images  -->
-    <section class="multi-images">
+    <section class="multi-images" id="deal">
 
         <div class="stack-images">
             <div class="image-inside-stack">
@@ -359,12 +360,13 @@
 
     <!-- product card -->
 
-    <div class="product-card">
+    <div class="product-card" id="pcard">
 
         <!-- card container class's same styling for product-card class -->
 
         <div class="product-card-content">
             <span class="discount">-31%</span>
+            <i class="fa-regular fa-heart" style="color: #e79eb0;"></i>
             <img src="image/Cosrx-Advanced-Snail-96-Mucin-Power-Essence-100ml.jpg" alt="">
             <p id="cont">COSRX Advanced snail 96 Mucin power Essence 100ml</p>
             <div class="star">
@@ -372,7 +374,8 @@
                 <i class='bx bxs-star' style="color: #e79eb0;"></i>
                 <i class='bx bxs-star' style="color: #e79eb0;"></i>
                 <i class='bx bxs-star' style="color: #e79eb0;"></i>
-                <i class='bx bxs-star' style="color: #e79eb0;"></i>
+                <i class='bx bxs-star-half' style="color: #e79eb0;"></i>
+
             </div>
             <span class="original-price">₹1450</span><span class="original-price-two">₹999</span>
             <button>Add to cart</button>
@@ -381,14 +384,15 @@
 
         <div class="product-card-content">
             <span class="discount">-39%</span>
+            <i class="fa-regular fa-heart" style="color: #e79eb0;"></i>
             <img src="image/Cosrx-Acne-Pimple-Master-Patch.jpg" alt="">
             <p id="cont">COSRX Acne pimple Master patch(24 pimple patches)</p>
             <div class="star">
                 <i class='bx bxs-star' style="color: #e79eb0;"></i>
                 <i class='bx bxs-star' style="color: #e79eb0;"></i>
                 <i class='bx bxs-star' style="color: #e79eb0;"></i>
-                <i class='bx bxs-star' style="color: #e79eb0;"></i>
-                <i class='bx bxs-star' style="color: #e79eb0;"></i>
+                <i class='bx bxs-star-half' style="color: #e79eb0;"></i>
+                <i class='bx bx-star' style="color: #e79eb0;"></i>
             </div>
             <span class="original-price">₹280</span><span class="original-price-two">₹170</span>
             <button>Add to cart</button>
@@ -396,6 +400,7 @@
 
         <div class="product-card-content">
             <span class="discount">-33%</span>
+            <i class="fa-regular fa-heart" style="color: #e79eb0;"></i>
             <img src="image/Cosrx-Advanced-Snail-92-All-in-one-Cream-100g.jpg" alt="">
             <p id="cont">COSRX Advanced snail 92 All In One Cream/mucin 100ml</p>
             <div class="star">
@@ -403,7 +408,7 @@
                 <i class='bx bxs-star' style="color: #e79eb0;"></i>
                 <i class='bx bxs-star' style="color: #e79eb0;"></i>
                 <i class='bx bxs-star' style="color: #e79eb0;"></i>
-                <i class='bx bxs-star' style="color: #e79eb0;"></i>
+                <i class='bx bxs-star-half' style="color: #e79eb0;"></i>
             </div>
             <span class="original-price">₹1650</span> <span class="original-price-two">₹1100</span>
             <button>Add to cart</button>
@@ -411,14 +416,15 @@
 
         <div class="product-card-content">
             <span class="discount">-9%</span>
+            <i class="fa-regular fa-heart" style="color: #e79eb0;"></i>
             <img src="image/Hyaluronic-Acid-Watery-Sun-Gel-50ml-1.jpg" alt="">
             <p id="cont">ISNTREE hyaluronic Acid Watery Sun Gel SPF 50 PA++++ 50ml</p>
             <div class="star">
                 <i class='bx bxs-star'></i>
                 <i class='bx bxs-star'></i>
                 <i class='bx bxs-star'></i>
-                <i class='bx bxs-star'></i>
-                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star-half'></i>
+                <i class='bx bx-star'></i>
             </div>
             <span class="original-price">₹1650</span> <span class="original-price-two">₹1499</span>
             <button>Add to cart</button>
@@ -427,16 +433,28 @@
     </div>
 
     <!-- featured images section -->
-    <div class="brands">
+    <div class="brands" id="brand">
         <div class="brand-images">
             <div class="image-brand">
                 <img src="image/girl1.jpg" alt="">
+                <div class="girl-text">
+                    <h5>Axis Y</h5>
+                    <p>Climate Inspired Skincare</p>
+                </div>
             </div>
             <div class="image-brand">
                 <img src="image/girl2.jpg" alt="">
+                <div class="girl-text">
+                    <h5>Cosrx</h5>
+                    <p>Top Brand For Blemishes & Acne</p>
+                </div>
             </div>
             <div class="image-brand">
                 <img src="image/girl3.jpg" alt="">
+                <div class="girl-text">
+                    <h5>Dear Klairs</h5>
+                    <p>Vegan Friendly,Cruelty Free</p>
+                </div>
             </div>
         </div>
     </div>
@@ -449,7 +467,7 @@
 
     <!-- subscribe form -->
 
-    <div class="subscribe">
+    <div class="subscribe" id="sub">
         <div class="subscribe-form">
             <h2 id="sub-text">Sign up for subscriber-only discounts, first look at newly-curated items & K-beauty
                 skincare tips!
@@ -457,17 +475,17 @@
 
             <form action="" class="form-class">
                 <div class="yourname" style="margin-bottom: 10px;">
-                    <label id="uname"><input type="text" name="username" id="uname" placeholder="Your Name" required
-                            autocomplete="username" />
+                    <label id="uname"><input type="text" name="username" id="uname" placeholder="Your Name" required />
+
                     </label>
                 </div>
                 <div class="email" style=" margin-top: 10px;margin-bottom: 20px;">
-                    <label id="email"><input type="text" name="email" id="email" placeholder="Your Email" required
-                            autocomplete="email" />
+                    <label id="email"><input type="text" name="email" id="email" placeholder="Your Email" required />
+
                     </label>
                 </div>
                 <div class="sub-button">
-                <a href="subscribe.html">subscribe</a>
+                    <a href="subscribe.html">subscribe</a>
                 </div>
             </form>
 
@@ -477,13 +495,13 @@
     <!-- footer section -->
     <footer class="footer-part">
 
-        <div class="part1" style="    flex: 1 1 25%;border-right: 1px solid #cac4c4;">
+        <div class="part1">
             <a href=""><img src="image/logo.webp" alt="brand logo"></a>
             <p>The #1 Korean Skincare Destination in India
                 Now on Android & iOS</p>
             <p>Now on Android and IOS</p>
         </div>
-        <div class="part2" style="    flex: 1 1 25%;border-right: 1px solid #cac4c4;">
+        <div class="part2">
             <h2>customer care</h2>
             <ul class="footer-cont">
                 <li><a href="">My Account</a></li>
@@ -495,7 +513,7 @@
                 <li><a href="">Privacy policy</a></li>
             </ul>
         </div>
-        <div class="part2" style="    flex: 1 1 25%;border-right: 1px solid #cac4c4;">
+        <div class="part2">
             <h2>about</h2>
             <ul class="footer-cont">
                 <li><a href="">About Us</a></li>
@@ -507,7 +525,7 @@
 
             </ul>
         </div>
-        <div class="part2" style="flex: 1 1 25%;">
+        <div class="part2" style="border: none;">
             <h2>reach us</h2>
             <ul class="footer-cont">
                 <li><a href="">Beauty Barn

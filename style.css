@@ -65,6 +65,7 @@
   display: flex;
   width: 15%;
   
+  
 }
 
 .navbar {
@@ -72,6 +73,7 @@
   flex-wrap: wrap;
   gap: 20px;
   list-style-type: none;
+  
 }
 
 .navbar li a {
@@ -1060,16 +1062,52 @@ form #uname,
     margin-bottom: 30px;
     margin-left: 10px;
   }
+ 
 }
 
 @media screen and (max-width: 450px) {
+  
   .nav .logo {
     width: 30%;
   }
- .right-textwidget :nth-child(n + 1) ,
-  .navbar
+ .right-textwidget :nth-child(n + 1) 
+
+ 
   {
     display: none;
+  }
+ .navbar
+ {
+  display: block;
+  
+ }
+  .navbar li 
+  {
+    margin-top: 5px;
+  }
+  .nav
+  {
+    
+    flex-wrap: wrap;
+   
+  }
+  .nav .logo
+  {
+    order: 1;
+  }
+ 
+ .navbar-content
+  {
+   
+    order: 4;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .search-cart
+  {
+    order: 2;
+
   }
 
   .slide img {
@@ -1106,9 +1144,11 @@ form #uname,
     width: 100%;
     margin: 10px 0 0 0;
    }
+ 
 }
 
 @media screen and (max-width: 400px) {
+ 
   
   .slider{
     margin: 0;

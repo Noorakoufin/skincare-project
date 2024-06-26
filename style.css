@@ -73,7 +73,11 @@
   background-color: transparent;
   border: none;
 }
-input[type="checkbox"]{appearance: none;}
+input[type="checkbox"]
+
+{
+  appearance: none;
+}
 .navbar {
   display: flex;
   flex-wrap: wrap;

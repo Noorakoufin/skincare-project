@@ -766,7 +766,10 @@ i.fa-regular.fa-heart
   border-radius: 4px;
   transition: all 0.2s ease-in-out;
 }
-
+.product-card-content img{
+  height:300px ;
+  object-fit: cover;
+}
 .product-card-content button:hover {
   background-color: #d37188;
   color: #e8e2e2;
